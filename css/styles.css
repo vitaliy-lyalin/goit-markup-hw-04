@@ -16,6 +16,8 @@
 
 /* Фон футера #2F303A */
 
+/* Колір фону іконок #AFB1B8 */
+
 :root {
   --primary-text-color: #757575;
   --secondary-text-color: #212121;
@@ -26,6 +28,7 @@
   --secondary-background-color: #f5f4fa;
   --footer-background-color: #2f303a;
   --footer-text-color: rgba(255, 255, 255, 0.6);
+  --icon-background-color: #AFB1B8;
 }
 /* Глобальні стилі */
 body {
@@ -157,12 +160,12 @@ img {
   padding-top: 24px;
   padding-bottom: 24px;
 }
-.nav-site .link {
+.nav-site .item {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
 }
-.nav-contacts .link {
+.nav-contacts .item {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -352,7 +355,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  fill: #afb1b8;
+  fill: var(--icon-background-color);
   background-color: var(--white-color);
 } 
 
@@ -362,12 +365,42 @@ img {
   background-color: var(--accent-color);
 }
 
+/* Постійні клієнти */
+.clients {
+padding-top: 94px;
+padding-bottom: 94px;
+}
+
+.clients-list {
+  display: flex;
+  justify-content: center;
+}
+
+.clients-element:not(:last-child) {
+  margin-right: 30px;
+}
+
+.clients-element .link {
+  display: flex;
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--icon-background-color);
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  fill: var(--icon-background-color);
+}
+.clients-element .link:hover,
+.clients-element .link:focus {
+  fill: var(--accent-color);
+}
 /* Футер */
 .page-footer {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--footer-background-color);
 }
+
 .logo.footer {
   display: block;
   padding-top: 0;
