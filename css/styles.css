@@ -29,7 +29,7 @@
   --footer-background-color: #2f303a;
   --footer-text-color: rgba(255, 255, 255, 0.6);
   --icon-background-color: #afb1b8;
-  --footer-icon-background-color:rgba(255, 255, 255, 0.1);
+  --footer-icon-background-color: rgba(255, 255, 255, 0.1);
 }
 /* Глобальні стилі */
 body {
@@ -222,7 +222,7 @@ img {
 }
 /* Герой  */
 .overlay {
-  width: 1600px;
+  max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
@@ -274,7 +274,7 @@ img {
 .feature-list .title {
   margin-top: 0;
   margin-bottom: 10px;
-
+  
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -283,7 +283,12 @@ img {
   color: var(--secondary-text-color);
 }
 .icon-element {
-  padding: 25px 100px;
+  /* padding: 25px 100px; */
+  display: flex;
+  height: 120px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 30px;
   background: #f5f4fa;
   border-radius: 4px;
@@ -329,7 +334,7 @@ img {
   margin-right: 30px;
 }
 .team-list .text {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.19;
 }
@@ -394,6 +399,8 @@ img {
 .clients-element .link:hover,
 .clients-element .link:focus {
   fill: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  
 }
 /* Футер */
 .page-footer {
@@ -450,12 +457,14 @@ img {
 .main-join .title {
   margin-top: 0;
   margin-bottom: 20px;
-  font-style: normal;  line-height: 1.14;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.14;
   text-transform: uppercase;
   color: var(--white-color);
 }
 .services-item:not(:last-child) {
-margin-right: 10px;
+  margin-right: 10px;
 }
 .services-item .link {
   border-radius: 50%;
@@ -509,8 +518,7 @@ margin-right: 10px;
 .filter-list .item:focus {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-    border-radius: 4px; 
-   
+  border-radius: 4px;
 }
 .work-list .item:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
