@@ -28,7 +28,8 @@
   --secondary-background-color: #f5f4fa;
   --footer-background-color: #2f303a;
   --footer-text-color: rgba(255, 255, 255, 0.6);
-  --icon-background-color: #AFB1B8;
+  --icon-background-color: #afb1b8;
+  --footer-icon-background-color:rgba(255, 255, 255, 0.1);
 }
 /* Глобальні стилі */
 body {
@@ -357,7 +358,7 @@ img {
   align-items: center;
   fill: var(--icon-background-color);
   background-color: var(--white-color);
-} 
+}
 
 .team-social .link:hover,
 .team-social .link:focus {
@@ -367,8 +368,8 @@ img {
 
 /* Постійні клієнти */
 .clients {
-padding-top: 94px;
-padding-bottom: 94px;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .clients-list {
@@ -396,22 +397,23 @@ padding-bottom: 94px;
 }
 /* Футер */
 .page-footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
   background-color: var(--footer-background-color);
 }
-
+.main-contacts {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
 .logo.footer {
   display: block;
   padding-top: 0;
   padding-bottom: 0;
   margin-bottom: 20px;
 }
-.footer .item:not(:last-child) {
+.contacts-list .item:not(:last-child) {
   margin-top: 0;
   margin-bottom: 9px;
 }
-.footer .location-link {
+.contacts-list .location-link {
   display: block;
 
   font-weight: 400;
@@ -420,11 +422,11 @@ padding-bottom: 94px;
   color: var(--white-color);
   text-decoration: none;
 }
-.footer .location-link:hover,
-.footer .location-link:focus {
+.contacts-list .location-link:hover,
+.contacts-list .location-link:focus {
   color: var(--accent-color);
 }
-.footer .contact-link {
+.contacts-list .contact-link {
   display: block;
 
   font-style: normal;
@@ -433,9 +435,41 @@ padding-bottom: 94px;
   color: var(--footer-text-color);
   text-decoration: none;
 }
-.footer .contact-link:hover,
-.footer .contact-link:focus {
+.contacts-list .contact-link:hover,
+.contacts-list .contact-link:focus {
   color: var(--accent-color);
+}
+.main-join {
+  margin-left: 70px;
+  padding-top: 72px;
+  padding-bottom: 100px;
+}
+.services-list {
+  display: flex;
+}
+.main-join .title {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-style: normal;  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--white-color);
+}
+.services-item:not(:last-child) {
+margin-right: 10px;
+}
+.services-item .link {
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: var(--white-color);
+  background-color: var(--footer-icon-background-color);
+}
+.services-item .link:hover,
+.services-item .link:focus {
+  background-color: var(--accent-color);
 }
 
 /* Стилі для сторінки portfolio.html */
@@ -470,6 +504,17 @@ padding-bottom: 94px;
 }
 .work-list .item:not(:nth-last-child(-n + 3)) {
   margin-bottom: 30px;
+}
+.filter-list .item:hover,
+.filter-list .item:focus {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px; 
+   
+}
+.work-list .item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .work-list .title {
